@@ -1,0 +1,35 @@
+<html>
+
+	<head>
+
+		<script type="text/javascript" src="modules/require.js"></script>
+
+		<script type="text/javascript">
+
+			function validate() {
+
+				var validator = require('modules/validator');
+
+				if (validator.isValidYo(document.getElementById('thing').value)) {
+					alert("They're good YOs Brent");
+				}
+				else {
+					alert("BAD!");
+				}
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<h1>Make sure this field is required and says "yo"</h1>
+
+		<input type="text" name="thing" id="thing" />
+
+		<input type="button" value="Validate!" onClick="validate()" />
+
+	</body>
+
+</html>
